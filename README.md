@@ -1,8 +1,8 @@
 # React steps
 
-This component basically introduces an approach to rendering a sequence of components (steps) and collecting the data each component submits. The main idea is that each of "step" components does not know of any others.
+This component introduces an approach to rendering a sequence of components (steps) and collecting the data each component submits. The main idea is that each of "step" components is not aware of any others.
 
-This is useful for step forms, sequenced flows, etc.
+This is useful for multi-step forms, sequenced flows, etc.
 
 ## Install
 
@@ -37,8 +37,8 @@ Each step component will be assigned a set of special props that can be used ins
 | done | function | Should be called when it's time to transition to the next step. Any data can be passed as an argument. This data will then be collected and passed to `onComplete` callback of the steps container |
 | goBack | function | Should be called to go a step back. No arguments expected |
 
-Once the last steps submits it's completion the `onComplete` function will be called on the steps component.
-As a first argument there is going to be an array containing the data that was submitted by each of the steps. Just take a closer look at the code example up above.
+Once the last step submits it's completion the `onComplete` function will be called on the steps container.
+As a first argument there is going to be passed an array containing the data that was submitted by each of the steps. Just take a closer look at the code example up above.
 
 ## Build
 
